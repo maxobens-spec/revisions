@@ -23,7 +23,7 @@ const CASES: readonly { name: string; input: Partial<GradeInput>; accept: readon
   },
   // Cas limite : une réponse vraie mais hors sujet (elle ne dit rien du "pourquoi symbole").
   // Le modèle peut légitimement trancher pour non_su ("tu n'as pas répondu à la question")
-  // ou approximatif ("tu as une idée liée mais incomplète") — les deux lectures se défendent.
+  // ou approximatif ("tu as une idée liée mais incomplète") : les deux lectures se défendent.
   { name: "réponse partielle", input: { studentAnswer: "C'était une prison." }, accept: ["approximatif", "non_su"] },
   {
     name: "deuxième tentative qui complète correctement",
